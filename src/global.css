@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.timeslot-scheduler {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #000;
+}
+header {
+  text-align: center;
+}
+
+.scheduler-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.calendar-section {
+  flex: 1;
+  margin: auto;
+}
+
+.timeslot-section {
+  flex: 1;
+}
+.bg-gray {
+  background-color: #ebebf0;
+}
+.timeslots {
+  margin-top: 10px;
+}
+
+.timeslot {
+  display: block;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #378760;
+  border-radius: 8px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  color: #378760;
+  transition: background-color 0.3s;
+}
+
+.timeslot.selected {
+  background-color: #378760;
+  color: #fff;
+}
+
+.next-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #378760;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.next-button:disabled {
+  background-color: #fff;
+  cursor: not-allowed;
+}
+
+.next-button:hover:not(:disabled) {
+  background-color: #378760;
+}
+.react-calendar__month-view__weekdays__weekday {
+  color: #378760;
+}
+.react-calendar__tile--active {
+  display: inline-block;
+  background-color: #378760;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  display: inline-block;
+  background-color: #378760;
+  color: white;
+
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 494px;
+  width: 928px;
+}
+
+.flex-column {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .flex-column {
+    flex-basis: 100%;
+  }
+}
+.label-variant {
+  font-weight: 700;
+  font-size: small;
+}
+select {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 10px 10px 2px;
+  border: 1px solid #c7c9d9;
+  background-color: #fafafc;
+  color: #378760;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.react-calendar {
+  padding: 5px;
+}
