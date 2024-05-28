@@ -28,12 +28,11 @@ export const fetchTimeSlots =
   async (dispatch) => {
     dispatch({ type: FETCH_TIMESLOTS_REQUEST });
     let result = formatter.getDateRange(date);
-    console.log(result);
     try {
       const response = await axios.get(
         `https://app.appointo.me/scripttag/mock_timeslots?start_date=${result?.startDate}&end_date=${result?.endDate}`
       );
-      console.log(response);
+
       dispatch({ type: FETCH_TIMESLOTS_SUCCESS, payload: response.data });
     } catch (error) {
       dispatch({ type: FETCH_TIMESLOTS_FAILURE, payload: error.message });

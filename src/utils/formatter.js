@@ -6,7 +6,16 @@ const formatter = {
       day: "2-digit",
     });
   },
-  prettyDate() {},
+  prettyDate(date) {
+    let newDate = new Date(date);
+    const options = {
+      weekday: "long",
+      month: "short",
+      day: "numeric",
+    };
+
+    return newDate.toLocaleDateString("en-US", options);
+  },
   getDateRange(date) {
     let newDate = new Date(date);
     newDate.setDate(newDate.getDate() + 1);

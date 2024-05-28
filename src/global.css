@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
   margin: 0;
   padding: 0;
 }
@@ -28,7 +28,16 @@ header {
 
 .calendar-section {
   flex: 1;
-  margin: auto;
+  margin-top: 20px;
+}
+.text-md {
+  font-size: 24px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-xs {
+  font-size: 12px;
 }
 
 .timeslot-section {
@@ -36,6 +45,23 @@ header {
 }
 .bg-gray {
   background-color: #ebebf0;
+}
+.simple-shadow {
+  box-shadow: 10px 10px 5px #888888;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-primary {
+  background-color: #378760;
+  width: 928px;
+}
+.text-white {
+  color: #fff;
+}
+.app-name {
+  place-content: center;
+  padding-left: 20px;
 }
 .timeslots {
   margin-top: 10px;
@@ -59,28 +85,27 @@ header {
 .timeslot.selected {
   background-color: #378760;
   color: #fff;
+  display: flex;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.timeslot.selected img {
+  margin-left: auto;
 }
 
 .next-button {
   display: block;
   width: 100%;
-  padding: 15px;
+  padding: 8px 30px 8px 30px;
   border: none;
   border-radius: 4px;
-  background-color: #378760;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   cursor: pointer;
   text-align: center;
 }
 
-.next-button:disabled {
-  background-color: #fff;
-  cursor: not-allowed;
-}
-
-.next-button:hover:not(:disabled) {
-  background-color: #378760;
-}
 .react-calendar__month-view__weekdays__weekday {
   color: #378760;
 }
@@ -108,10 +133,77 @@ header {
 }
 .flex-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 109px 0px 0px 0px;
+  gap: 0px;
   height: 494px;
   width: 928px;
+}
+
+@media (max-width: 1200px) {
+  .flex-container {
+    max-width: 1000px;
+
+    height: auto;
+  }
+  .next-button-div {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 992px) {
+  .flex-container {
+    max-width: 800px;
+
+    gap: 8px;
+    height: auto;
+  }
+  .next-button-div {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    max-width: 600px;
+    padding: 2% 0;
+    gap: 6px;
+    flex-direction: column; /* Stack items vertically on small screens */
+    height: auto;
+  }
+  .next-button-div {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flex-container {
+    max-width: 100%;
+    padding: 1% 0;
+    gap: 4px;
+    height: auto;
+  }
+
+  .next-button-div {
+    max-width: 100%;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .react-calendar {
+    width: auto;
+    border: gray;
+    height: 334px;
+  }
+}
+.next-button-div {
+  display: flex;
+  padding: 0px 0px 109px 0px;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 78px;
+  width: 928px;
+  /* padding-bottom: 50px; */
 }
 
 .flex-column {
@@ -142,4 +234,215 @@ select {
 }
 .react-calendar {
   padding: 5px;
+  border: gray;
+  height: 334px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header-container {
+  height: 85px;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  margin-right: 1rem;
+}
+
+.company-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 0.875rem;
+  color: gray;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-button {
+  background: none;
+  color: #090f4e;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 1rem;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5rem;
+}
+
+.contact-link {
+  color: gray;
+  text-decoration: none;
+}
+
+.share-link {
+  display: flex;
+  align-items: center;
+  color: green;
+  border: 1px solid green;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 18px;
+}
+
+.share-link:hover {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.share-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+.centered-div {
+  margin: 0 auto;
+}
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+} */
+
+.logo {
+  font-size: 1.5em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  color: black;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+    background-color: white;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .bar.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+.left-image {
+  width: auto; /* Adjust the size as needed */
+  height: auto;
+  position: absolute;
+  top: 85%;
+  transform: translateY(-40%);
+  z-index: -1;
+}
+
+.right-image {
+  width: auto; /* Adjust the size as needed */
+  height: auto;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.left-image {
+  left: -60px; /* Adjust the positioning as needed */
+}
+
+.right-image {
+  right: 0px; /* Adjust the positioning as needed */
+}
+
+.next-button-alignment {
+  display: flex;
+  align-items: center;
+}
+.selected-slot {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.slot-text {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 21px;
+}
+.text-dark {
+  color: #5a5c74;
+}
+.font-bold {
+  font-weight: bold;
+}
+.react-calendar__navigation__label {
+  font-size: 18px;
 }
