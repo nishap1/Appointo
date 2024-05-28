@@ -46,7 +46,7 @@ const TimeslotScheduler = () => {
   return (
     <>
       <div>
-        <img src="/vector1.svg" className="right-image" alt="Left Image" />
+        <img src="/vector1.svg" className="right-image" alt="rightvector" />
       </div>
       <div className="App">
         <div>
@@ -111,7 +111,7 @@ const TimeslotScheduler = () => {
                             {formatter.formatDateTime(slot.end_time)}
                           </div>
                           <div>
-                            {selectedSlot == index && (
+                            {selectedSlot === index && (
                               <img
                                 src="/check-icon.svg"
                                 className="check-icon"
@@ -155,7 +155,7 @@ const TimeslotScheduler = () => {
         </div>
       </div>
       <div>
-        <img src="/vector2.svg" className="left-image" alt="Left Image" />
+        <img src="/vector2.svg" className="left-image" alt="leftvector" />
       </div>
     </>
   );
